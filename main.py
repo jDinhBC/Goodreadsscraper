@@ -105,9 +105,9 @@ if os.path.exists(file_path):
 # Write the DataFrame to a text file with proper formatting
 with open(file_path, 'w') as file:
     header = (
-        'Title'.ljust(title_width) +
+        'Title'.ljust(title_width-2) +
         'Rating'.ljust(rating_width) +
-        'Num Ratings'.ljust(num_ratings_width)
+        '  Num Ratings'.ljust(num_ratings_width)
     )
     file.write(header + '\n')
     file.write('-' * len(header) + '\n')
